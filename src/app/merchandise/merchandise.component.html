@@ -1,0 +1,29 @@
+<h1>Merchandise available</h1>
+
+<table id="merchandise" border="1">
+  <caption>Food</caption>
+  <thead>
+      <tr>
+        <th>CodArt</th>
+        <th>Description</th>
+        <th>Um</th>
+        <th>Pieces</th>
+        <th>Weight(KG/LT)</th>
+        <th>Price</th>
+        <th>Active</th>
+        <th>Date</th>
+      </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of merchandise">
+      <td>{{ item.codart }}</td>
+      <td>{{ item.description }}</td>
+      <td>{{ item.um }}</td>
+      <td>{{ item.pzcart }}</td>
+      <td>{{ item.weight}}</td>
+      <td>{{ item.price | currency : 'EUR' }}</td>
+      <td>{{ item.active }}</td>
+      <td>{{ item.date | date : 'dd-MM-YYYY' }}</td>
+    </tr>
+  </tbody>
+</table>
