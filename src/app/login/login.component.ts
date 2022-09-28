@@ -16,6 +16,10 @@ export class LoginComponent implements OnInit {
   errMsg: string = "Sorry, the user Id and/or the password are not correct!";
   okMsg: string = "You are logged to the system now!";
 
+  title: string = "Access and Authentication";
+  subtitle: string = "Use user id and password";
+
+
   //Code injection che mi permette di accedere a tutti i metodi e proprietà dell'oggetto router.
   constructor(private route: Router) { }
 

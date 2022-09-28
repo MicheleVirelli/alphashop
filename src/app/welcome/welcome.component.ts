@@ -10,6 +10,9 @@ export class WelcomeComponent implements OnInit {
 
   user: string = "";
 
+  title: string = "Access and Authentication";
+  subtitle: string = "Use user id and password";
+
   constructor(private route: ActivatedRoute) {}
 
   ngOnInit(): void {

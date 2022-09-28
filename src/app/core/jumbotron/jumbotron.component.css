@@ -1,0 +1,36 @@
+#SignIn {
+  margin-right: 0.5em;
+  width: 6em;
+}
+
+#SignUp {
+  margin-left: 0.5em;
+  width: 6em;
+}
+
+.jumbotron-billboard .img {
+  margin-bottom: 0px;
+  opacity: 0.2;
+  color: #fff;
+  background: #000 url("http://www.layapp.cloud/images/gracery.jpg") top center no-repeat;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.jumbotron h2 {
+  margin-top:0;
+}
+
+.jumbotron {
+  position: relative;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  min-height: 150px;
+  margin-bottom: 0.5%;
+}
