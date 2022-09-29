@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { IItems } from '../modals/item';
+import { IItems } from '../../modals/item';
 
 @Component({
   selector: 'app-merchandise',

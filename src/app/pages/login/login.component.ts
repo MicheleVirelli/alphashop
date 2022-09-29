@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { AuthappService } from 'src/services/authapp.service';
 
 @Component({
   selector: 'app-login',
@@ -21,16 +22,18 @@ export class LoginComponent implements OnInit {
 
 
   //Code injection che mi permette di accedere a tutti i metodi e proprietà dell'oggetto router.
-  constructor(private route: Router) { }
+  constructor(private route: Router, private BasicAuth: AuthappService) { }
 
   ngOnInit(): void {
   }
 
   gestAuth(): void {
     console.log(this.userId);
-    if(this.userId === 'Michele' && this.password === "password"){
-      this.auth = true;
+
+
+    if(this.BasicAuth.auth(this.userId, this.password)){
       this.route.navigate(['welcome', this.userId]);
+      this.auth = true;
     }
     else {
       this.auth = false;
