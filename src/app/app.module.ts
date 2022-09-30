@@ -10,6 +10,8 @@ import { ErrorComponent } from './error/error.component';
 import { MerchandiseComponent } from './pages/merchandise/merchandise.component';
 import { CoreModule } from './core/core.module';
 import { LogoutComponent } from './pages/logout/logout.component';
+import { GridItemsComponent } from './pages/grid-items/grid-items.component';
+import { ItemCardComponent } from './components/item-card/item-card.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { LogoutComponent } from './pages/logout/logout.component';
     LoginComponent,
     ErrorComponent,
     MerchandiseComponent,
-    LogoutComponent
+    LogoutComponent,
+    GridItemsComponent,
+    ItemCardComponent
   ],
   imports: [
     BrowserModule,

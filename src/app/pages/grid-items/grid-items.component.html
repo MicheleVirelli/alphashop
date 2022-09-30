@@ -1,0 +1,46 @@
+<section class="content-main">
+  <div class="content-header">
+    <h2 class="content-title">Items Grid</h2>
+    <div>
+      <a href="#" class="btn btn-light">Export</a>
+      <a href="#" class="btn btn-light">Import</a>
+      <a href="#" class="btn btn-primary">Create</a>
+    </div>
+  </div>
+
+  <div class="card mb-4">
+    <header class="card-header">
+      <div class="row gx-3">
+        <div class="col-lg-4 col-md-6 me-auto">
+          <input type="text" placeholder="Search..." class="form-control">
+        </div>
+        <div class="col-lg-2 col-6 col-md-3">
+          <select class="form-select">
+            <option>All</option>
+            <option>Food</option>
+            <option>Chemical</option>
+            <option>Fresh</option>
+          </select>
+        </div>
+        <div class="col-lg-2 col-6 col-md-3">
+          <select>
+            <option>New</option>
+            <option>Low price</option>
+            <option>Most purchased</option>
+          </select>
+        </div>
+      </div>
+    </header>
+
+    <div class="card-body">
+      <div class="row gx-3 row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-4 row-cols-xxl-5" *ngIf="items$">
+        <app-item-card
+        *ngFor="let item of items$"
+        [item] = "item"
+        (delete) = "handleDelete($event)"
+        (edit) = "handleEdit($event)"
+        ></app-item-card>
+      </div>
+    </div>
+  </div>
+</section>

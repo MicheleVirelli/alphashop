@@ -7,6 +7,7 @@ import { ErrorComponent } from './error/error.component';
 import { MerchandiseComponent } from './pages/merchandise/merchandise.component';
 import { LogoutComponent } from './pages/logout/logout.component';
 import { RouteGuardServiceService } from 'src/services/route-guard-service.service';
+import { GridItemsComponent } from './pages/grid-items/grid-items.component';
 
 const appRoutes: Routes = [
     { path: '', component: LoginComponent},
@@ -15,6 +16,7 @@ const appRoutes: Routes = [
     { path: 'welcome', component: WelcomeComponent, canActivate:[RouteGuardServiceService]},
     { path: 'welcome/:userid', component: WelcomeComponent, canActivate:[RouteGuardServiceService]},
     { path: 'merchandise', component: MerchandiseComponent, canActivate:[RouteGuardServiceService]},
+    { path: 'merchandise/grid', component: GridItemsComponent, canActivate:[RouteGuardServiceService]},
     { path: '**', component: ErrorComponent}
 ];
 

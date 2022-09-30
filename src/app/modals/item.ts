@@ -11,4 +11,5 @@ export interface IItems{
   price: number,
   active: boolean,
   date: Date,
+  imageUrl: string,
 }
